@@ -1,6 +1,6 @@
 # deno-starter-ts
 
-## Deno Starter Template with TypeScript
+## Deno Starter Template built with TypeScript
 
 ### Dependencies
 
