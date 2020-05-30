@@ -3,4 +3,6 @@ import getStructures from './controllers/getStructures.ts'
 
 const structures = await getStructures()
 
-writeFileStrSync('./sctrucures.txt', structures.join('\n'))
+const content = structures.map(str => `${str.id} - ${str.name}`).join('\n')
+
+writeFileStrSync('./sctrucures.txt', content)
