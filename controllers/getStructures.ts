@@ -4,12 +4,12 @@ import Structure from '../models/Structure.ts'
 export default async (): Promise<Structure[]> => {
   const client = await new Client().connect({
     hostname: '127.0.0.1',
-    username: 'newuser',
-    password: 'Thrasher123#',
+    username: 'root',
+    password: 'root',
     db: 'deno-starter'
   })
 
-  const data = await client.query('select id, name from * structures')
+  const data = await client.query('select * from structures')
 
   const structures: Structure[] = data.map(
     (reg: any): Structure => {
